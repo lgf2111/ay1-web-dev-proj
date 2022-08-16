@@ -1,0 +1,217 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.bg {
+  z-index: 1;
+}
+
+.bg .stars,
+.bg .twinkling,
+.bg .clouds {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg .stars {
+  z-index: 0;
+  background: #000 url("https://image.ibb.co/mjnygo/stars.png") repeat top center;
+}
+
+.bg .twinkling {
+  z-index: 1;
+  background: transparent url("https://image.ibb.co/ir1DE8/twinkling.png") repeat top center;
+  animation: move-twink-back 200s linear infinite;
+}
+
+.bg .clouds {
+  z-index: 2;
+  background: transparent url("https://image.ibb.co/bT4N7T/clouds.png") repeat top center;
+  animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+.content {
+  z-index: 2;
+  position: absolute;
+  display: grid;
+  width: 99%;
+  height: 98%;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1.5fr 3.5fr 2.5fr 0.5fr 1fr;
+  grid-template-areas: 'extra name extra2' 'extra3 spec img' 'extra4 fact extra5';
+  align-items: center;
+  justify-items: center;
+}
+
+.content .name {
+  position: absolute;
+  grid-area: name;
+  color: white;
+}
+
+.content .spec {
+  position: absolute;
+  grid-area: spec;
+  color: white;
+}
+
+.content .img {
+  position: absolute;
+  grid-area: img;
+  color: white;
+}
+
+.fact {
+  z-index: 99;
+  position: fixed;
+  height: 40%;
+  width: 50%;
+  color: white;
+  left: 28%;
+  bottom: 15%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.fact::-webkit-scrollbar {
+  display: none;
+}
+
+.grid {
+  z-index: 2;
+  position: absolute;
+  display: grid;
+  width: 99%;
+  height: 98%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 6fr 3fr 1fr;
+  grid-template-areas: 'extra extra extra' 'extra2 button planet' 'index info planets';
+  align-items: center;
+  justify-items: center;
+}
+
+.grid .active {
+  cursor: pointer;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  color: #ffffff;
+}
+
+.grid .index {
+  position: absolute;
+  grid-area: index;
+  cursor: pointer;
+  color: white;
+}
+
+.grid .index:hover {
+  cursor: pointer;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  color: #ffffff;
+}
+
+.grid .info {
+  position: absolute;
+  grid-area: info;
+  color: white;
+}
+
+.grid .info:hover {
+  cursor: pointer;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  color: #ffffff;
+}
+
+.grid .planet {
+  position: absolute;
+  grid-area: planet;
+  align-self: flex-end;
+  color: white;
+}
+
+.grid .planet li {
+  text-align: center;
+  list-style-type: none;
+  padding-top: 0.2em;
+}
+
+.grid .planet li:hover {
+  cursor: pointer;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  color: #ffffff;
+}
+
+.grid .planets {
+  position: absolute;
+  grid-area: planets;
+  color: white;
+}
+
+.grid .planets:hover {
+  cursor: pointer;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  color: #ffffff;
+}
+
+.grid a {
+  text-decoration: none;
+  color: white;
+}
+
+.grid .button {
+  grid-area: button;
+  align-self: flex-end;
+}
+
+.grid .button button {
+  color: white;
+  background-image: url(../images/gradient.jpg);
+  background-size: 100px 100px;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.3rem;
+}
+
+.grid .button button:hover {
+  cursor: pointer;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  color: #ffffff;
+}
+
+.grid .button:active {
+  transform: scale(0.95);
+}
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff, 0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+  }
+}
+/*# sourceMappingURL=planet.css.map */

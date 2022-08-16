@@ -1,0 +1,289 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bg {
+    z-index: 1;
+
+    .stars,
+    .twinkling,
+    .clouds {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .stars {
+        z-index: 0;
+        background: #000 url("https://image.ibb.co/mjnygo/stars.png") repeat top center;
+    }
+
+    .twinkling {
+        z-index: 1;
+        background: transparent url("https://image.ibb.co/ir1DE8/twinkling.png") repeat top center;
+        animation: move-twink-back 200s linear infinite;
+    }
+
+    .clouds {
+        z-index: 2;
+        background: transparent url("https://image.ibb.co/bT4N7T/clouds.png") repeat top center;
+        animation: move-clouds-back 200s linear infinite;
+    }
+
+    @keyframes move-twink-back {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: -10000px 5000px;
+        }
+    }
+
+    @keyframes move-clouds-back {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 10000px 0;
+        }
+    }
+}
+
+.content {
+    z-index: 2;
+    position: absolute;
+    display: grid;
+    width: 99%;
+    height: 98%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1.5fr 3.5fr 2.5fr 0.5fr 1fr;
+    grid-template-areas:
+        'extra name extra2'
+        'extra3 spec img'
+        'extra4 fact extra5';
+    align-items: center;
+    justify-items: center;
+
+    .name {
+        position: absolute;
+        grid-area: name;
+        color: white;
+    }
+
+    .spec {
+        position: absolute;
+        grid-area: spec;
+        color: white;
+    }
+
+    .img {
+        position: absolute;
+        grid-area: img;
+        color: white;
+    }
+
+    // .fact {
+    //     z-index: 99;
+    //     position: absolute;
+    //     grid-area: fact;
+    //     color: white;
+    //     text-align: center;
+    //     height: 100%;
+    //     width: 100%;
+    //     overflow-y: scroll;
+    //     // h3, p {
+    //     //     animation: slide infinite 1s alternate;
+    //     //     @keyframes slide {
+    //     //         0% {
+    //     //             margin-top: 0px;
+    //     //         }
+    //     //         100% {
+    //     //             margin-top: -1em;
+    //     //         }
+    //     //     }
+    //     // }
+    // }
+}
+
+.fact {
+    z-index: 99;
+    position: fixed;
+    height: 40%;
+    width: 50%;
+    color: white;
+    left: 28%;
+    bottom: 15%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none; //chrome, safari, opera
+    }
+
+    -ms-overflow-style: none; // ie, edge
+    scrollbar-width: none; // firefox
+}
+
+.grid {
+    z-index: 2;
+    position: absolute;
+    display: grid;
+    width: 99%;
+    height: 98%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 6fr 3fr 1fr;
+    grid-template-areas:
+        'extra extra extra'
+        'extra2 button planet'
+        'index info planets';
+    align-items: center;
+    justify-items: center;
+
+    .active {
+        cursor: pointer;
+        -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+        -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+        animation: neon2 1.5s ease-in-out infinite alternate;
+        color: #ffffff;
+    }
+
+    .index {
+        position: absolute;
+        grid-area: index;
+        cursor: pointer;
+        color: white;
+
+        &:hover {
+            cursor: pointer;
+            -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+            -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+            animation: neon2 1.5s ease-in-out infinite alternate;
+            color: #ffffff;
+        }
+    }
+
+    .info {
+        position: absolute;
+        grid-area: info;
+        color: white;
+
+        &:hover {
+            cursor: pointer;
+            -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+            -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+            animation: neon2 1.5s ease-in-out infinite alternate;
+            color: #ffffff;
+        }
+    }
+
+    .planet {
+        position: absolute;
+        grid-area: planet;
+        align-self: flex-end;
+        color: white;
+
+        li {
+            text-align: center;
+            list-style-type: none;
+            padding-top: 0.2em;
+        }
+
+        li:hover {
+            cursor: pointer;
+            -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+            -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+            animation: neon2 1.5s ease-in-out infinite alternate;
+            color: #ffffff;
+        }
+    }
+
+    .planets {
+        position: absolute;
+        grid-area: planets;
+        color: white;
+
+        &:hover {
+            cursor: pointer;
+            -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+            -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+            animation: neon2 1.5s ease-in-out infinite alternate;
+            color: #ffffff;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .button {
+        grid-area: button;
+        align-self: flex-end;
+
+        button {
+            color: white;
+            background-image: url(../images/gradient.jpg);
+            background-size: 100px 100px;
+            border: none;
+            border-radius: 1rem;
+            padding: 0.3rem;
+
+            &:hover {
+                cursor: pointer;
+                -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+                -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+                animation: neon2 1.5s ease-in-out infinite alternate;
+                color: #ffffff;
+            }
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+    }
+}
+
+
+
+
+@-webkit-keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+            0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    }
+
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+            0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+    }
+}
+
+@-moz-keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+            0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    }
+
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+            0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+    }
+}
+
+@keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+            0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    }
+
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+            0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+    }
+}

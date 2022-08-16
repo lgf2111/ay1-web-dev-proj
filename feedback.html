@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body {
+            width: 97vw;
+            height: 97vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: solid 1px;
+        }
+        /* td {
+            height: 86vh;
+            width: 100vh;
+        } */
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Rating</th>
+            <th>Feedback</th>
+        </tr>
+        <tr>
+            <td id="rating"></td>
+            <td id="feedback"></td>
+        </tr>
+    </table>
+    <script>
+        rating = window.location.toString().slice(window.location.toString().search('rating')+7, window.location.toString().search('rating') + 8)
+        feedback = decodeURI(window.location.toString().slice(window.location.toString().search('rating')+18))
+        document.querySelector('#rating').innerText = rating
+        document.querySelector('#feedback').innerText = feedback
+    </script>
+</body>
+</html>
