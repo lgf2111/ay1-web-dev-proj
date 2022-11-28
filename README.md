@@ -61,8 +61,6 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://the-solar-system.lgf2111.repl.co/)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `lgf2111`, `the-solar-system`, `LeeGuanFeng4`, `lee-gaun-feng`, `gmail`, `lgf2111`, `The Solar System`, `View the solar system in 3D`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
