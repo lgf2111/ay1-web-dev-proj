@@ -3,6 +3,16 @@ import * as THREE from 'three';
 import {
   OrbitControls
 } from 'three/examples/jsm/controls/OrbitControls';
+import sunTextureUrl from '../images/texture/sun.jpg';
+import mercuryTextureUrl from '../images/texture/mercury.jpg';
+import venusTextureUrl from '../images/texture/venus.jpg';
+import earthTextureUrl from '../images/texture/earth.jfif';
+import marsTextureUrl from '../images/texture/mars.jpg';
+import jupiterTextureUrl from '../images/texture/jupiter.jfif';
+import saturnTextureUrl from '../images/texture/saturn.jfif';
+import ringTextureUrl from '../images/texture/ring.jfif';
+import uranusTextureUrl from '../images/texture/uranus.jpg';
+import neptuneTextureUrl from '../images/texture/neptune.jpg';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -43,9 +53,9 @@ function animate() {
   mars.rotation.x += 0.0008;
   mars.rotation.y += 0.0008;
   mars.rotation.z += 0.0008;
-  jupiter.rotation.x += 0.004; 
-  jupiter.rotation.y += 0.004; 
-  jupiter.rotation.z += 0.004; 
+  jupiter.rotation.x += 0.004;
+  jupiter.rotation.y += 0.004;
+  jupiter.rotation.z += 0.004;
   saturn.rotation.x += 0.0004;
   saturn.rotation.y += 0.0004;
   saturn.rotation.z += 0.0004;
@@ -68,7 +78,7 @@ renderer.render(scene, camera);
 const sun = new THREE.Mesh(
   new THREE.SphereGeometry(100, 100, 100),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('images/texture/sun.jpg')
+    map: new THREE.TextureLoader().load(sunTextureUrl)
   })
 );
 scene.add(sun);
@@ -78,7 +88,7 @@ sun.position.y = 120;
 const mercury = new THREE.Mesh(
   new THREE.SphereGeometry(2, 100, 100),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('images/texture/mercury.jpg')
+    map: new THREE.TextureLoader().load(mercuryTextureUrl)
   })
 );
 mercury.position.x = -32.8;
@@ -88,7 +98,7 @@ scene.add(mercury);
 const venus = new THREE.Mesh(
   new THREE.SphereGeometry(1.7, 100, 100),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('images/texture/venus.jpg')
+    map: new THREE.TextureLoader().load(venusTextureUrl)
   })
 );
 venus.position.x = -37;
@@ -98,7 +108,7 @@ scene.add(venus);
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(3.6, 100, 100),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('images/texture/earth.jfif')
+    map: new THREE.TextureLoader().load(earthTextureUrl)
   })
 );
 earth.position.x = -15;
@@ -108,7 +118,7 @@ scene.add(earth);
 const mars = new THREE.Mesh(
   new THREE.SphereGeometry(2.9, 100, 100),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('images/texture/mars.jpg')
+    map: new THREE.TextureLoader().load(marsTextureUrl)
   })
 );
 mars.position.x = -25;
@@ -118,7 +128,7 @@ scene.add(mars);
 const jupiter = new THREE.Mesh(
   new THREE.SphereGeometry(5.3, 100, 100),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('images/texture/jupiter.jfif')
+    map: new THREE.TextureLoader().load(jupiterTextureUrl)
   })
 );
 jupiter.position.x = -4;
@@ -128,7 +138,7 @@ scene.add(jupiter);
 const saturn = new THREE.Mesh(
   new THREE.SphereGeometry(5, 100, 100),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('images/texture/saturn.jfif')
+    map: new THREE.TextureLoader().load(saturnTextureUrl)
   })
 );
 saturn.position.x = 21;
@@ -138,7 +148,7 @@ scene.add(saturn);
 const ring = new THREE.Mesh(
   new THREE.RingGeometry(6, 10, 100),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('images/texture/ring.jfif'),
+    map: new THREE.TextureLoader().load(ringTextureUrl),
     side: THREE.DoubleSide
   })
 );
@@ -151,7 +161,7 @@ scene.add(ring);
 const uranus = new THREE.Mesh(
   new THREE.SphereGeometry(2.8, 100, 100),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('images/texture/uranus.jpg')
+    map: new THREE.TextureLoader().load(uranusTextureUrl)
   })
 );
 uranus.position.x = 16.5;
@@ -161,7 +171,7 @@ scene.add(uranus);
 const neptune = new THREE.Mesh(
   new THREE.SphereGeometry(2.8, 100, 100),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('images/texture/neptune.jpg')
+    map: new THREE.TextureLoader().load(neptuneTextureUrl)
   })
 );
 neptune.position.x = 43.5;
