@@ -1,5 +1,5 @@
 let modal = document.querySelector('#feedback')
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none"
     }
@@ -53,16 +53,16 @@ function rate1() {
     star3.className = 'fa fa-star'
     star4.className = 'fa fa-star'
     star5.className = 'fa fa-star'
-    star1.removeAttribute("onmouseover") 
-    star1.removeAttribute("onmouseout") 
-    star2.removeAttribute("onmouseover") 
-    star2.removeAttribute("onmouseout") 
-    star3.removeAttribute("onmouseover") 
-    star3.removeAttribute("onmouseout") 
-    star4.removeAttribute("onmouseover") 
-    star4.removeAttribute("onmouseout") 
-    star5.removeAttribute("onmouseover") 
-    star5.removeAttribute("onmouseout") 
+    star1.removeAttribute("onmouseover")
+    star1.removeAttribute("onmouseout")
+    star2.removeAttribute("onmouseover")
+    star2.removeAttribute("onmouseout")
+    star3.removeAttribute("onmouseover")
+    star3.removeAttribute("onmouseout")
+    star4.removeAttribute("onmouseover")
+    star4.removeAttribute("onmouseout")
+    star5.removeAttribute("onmouseover")
+    star5.removeAttribute("onmouseout")
     rate = 1
 }
 function rate2() {
@@ -71,16 +71,16 @@ function rate2() {
     star3.className = 'fa fa-star'
     star4.className = 'fa fa-star'
     star5.className = 'fa fa-star'
-    star1.removeAttribute("onmouseover") 
-    star1.removeAttribute("onmouseout") 
-    star2.removeAttribute("onmouseover") 
-    star2.removeAttribute("onmouseout") 
-    star3.removeAttribute("onmouseover") 
-    star3.removeAttribute("onmouseout") 
-    star4.removeAttribute("onmouseover") 
-    star4.removeAttribute("onmouseout") 
-    star5.removeAttribute("onmouseover") 
-    star5.removeAttribute("onmouseout") 
+    star1.removeAttribute("onmouseover")
+    star1.removeAttribute("onmouseout")
+    star2.removeAttribute("onmouseover")
+    star2.removeAttribute("onmouseout")
+    star3.removeAttribute("onmouseover")
+    star3.removeAttribute("onmouseout")
+    star4.removeAttribute("onmouseover")
+    star4.removeAttribute("onmouseout")
+    star5.removeAttribute("onmouseover")
+    star5.removeAttribute("onmouseout")
     rate = 2
 }
 function rate3() {
@@ -89,16 +89,16 @@ function rate3() {
     star3.className = 'fa fa-star checked'
     star4.className = 'fa fa-star'
     star5.className = 'fa fa-star'
-    star1.removeAttribute("onmouseover") 
-    star1.removeAttribute("onmouseout") 
-    star2.removeAttribute("onmouseover") 
-    star2.removeAttribute("onmouseout") 
-    star3.removeAttribute("onmouseover") 
-    star3.removeAttribute("onmouseout") 
-    star4.removeAttribute("onmouseover") 
-    star4.removeAttribute("onmouseout") 
-    star5.removeAttribute("onmouseover") 
-    star5.removeAttribute("onmouseout") 
+    star1.removeAttribute("onmouseover")
+    star1.removeAttribute("onmouseout")
+    star2.removeAttribute("onmouseover")
+    star2.removeAttribute("onmouseout")
+    star3.removeAttribute("onmouseover")
+    star3.removeAttribute("onmouseout")
+    star4.removeAttribute("onmouseover")
+    star4.removeAttribute("onmouseout")
+    star5.removeAttribute("onmouseover")
+    star5.removeAttribute("onmouseout")
     rate = 3
 }
 function rate4() {
@@ -107,16 +107,16 @@ function rate4() {
     star3.className = 'fa fa-star checked'
     star4.className = 'fa fa-star checked'
     star5.className = 'fa fa-star'
-    star1.removeAttribute("onmouseover") 
-    star1.removeAttribute("onmouseout") 
-    star2.removeAttribute("onmouseover") 
-    star2.removeAttribute("onmouseout") 
-    star3.removeAttribute("onmouseover") 
-    star3.removeAttribute("onmouseout") 
-    star4.removeAttribute("onmouseover") 
-    star4.removeAttribute("onmouseout") 
-    star5.removeAttribute("onmouseover") 
-    star5.removeAttribute("onmouseout") 
+    star1.removeAttribute("onmouseover")
+    star1.removeAttribute("onmouseout")
+    star2.removeAttribute("onmouseover")
+    star2.removeAttribute("onmouseout")
+    star3.removeAttribute("onmouseover")
+    star3.removeAttribute("onmouseout")
+    star4.removeAttribute("onmouseover")
+    star4.removeAttribute("onmouseout")
+    star5.removeAttribute("onmouseover")
+    star5.removeAttribute("onmouseout")
     rate = 4
 }
 function rate5() {
@@ -125,16 +125,16 @@ function rate5() {
     star3.className = 'fa fa-star checked'
     star4.className = 'fa fa-star checked'
     star5.className = 'fa fa-star checked'
-    star1.removeAttribute("onmouseover") 
-    star1.removeAttribute("onmouseout") 
-    star2.removeAttribute("onmouseover") 
-    star2.removeAttribute("onmouseout") 
-    star3.removeAttribute("onmouseover") 
-    star3.removeAttribute("onmouseout") 
-    star4.removeAttribute("onmouseover") 
-    star4.removeAttribute("onmouseout") 
-    star5.removeAttribute("onmouseover") 
-    star5.removeAttribute("onmouseout") 
+    star1.removeAttribute("onmouseover")
+    star1.removeAttribute("onmouseout")
+    star2.removeAttribute("onmouseover")
+    star2.removeAttribute("onmouseout")
+    star3.removeAttribute("onmouseover")
+    star3.removeAttribute("onmouseout")
+    star4.removeAttribute("onmouseover")
+    star4.removeAttribute("onmouseout")
+    star5.removeAttribute("onmouseover")
+    star5.removeAttribute("onmouseout")
     rate = 5
 }
 
@@ -163,16 +163,16 @@ function submit() {
     star3.className = 'fa fa-star'
     star4.className = 'fa fa-star'
     star5.className = 'fa fa-star'
-    star1.setAttribute("onmouseover", "rating1()") 
-    star1.setAttribute("onmouseout" , "rating0()")
-    star2.setAttribute("onmouseover", "rating2()") 
-    star2.setAttribute("onmouseout" , "rating0()")
-    star3.setAttribute("onmouseover", "rating3()") 
-    star3.setAttribute("onmouseout" , "rating0()")
-    star4.setAttribute("onmouseover", "rating4()") 
-    star4.setAttribute("onmouseout" , "rating0()")
-    star5.setAttribute("onmouseover", "rating5()") 
-    star5.setAttribute("onmouseout" , "rating0()")
+    star1.setAttribute("onmouseover", "rating1()")
+    star1.setAttribute("onmouseout", "rating0()")
+    star2.setAttribute("onmouseover", "rating2()")
+    star2.setAttribute("onmouseout", "rating0()")
+    star3.setAttribute("onmouseover", "rating3()")
+    star3.setAttribute("onmouseout", "rating0()")
+    star4.setAttribute("onmouseover", "rating4()")
+    star4.setAttribute("onmouseout", "rating0()")
+    star5.setAttribute("onmouseover", "rating5()")
+    star5.setAttribute("onmouseout", "rating0()")
     window.open(`feedback.html?rating=${rate}&feedback=${Feedback.value}`)
     rate = 0
     Feedback.value = ''

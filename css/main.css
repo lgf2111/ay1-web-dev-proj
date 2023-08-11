@@ -1,5 +1,5 @@
 * {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 canvas {
@@ -16,17 +16,15 @@ canvas {
   height: 98%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 6fr 3fr 1fr;
-  grid-template-areas: 'extra extra extra' 'extra2 extra2 planet' 'index info planets';
+  grid-template-areas: "extra extra extra" "extra2 extra2 planet" "index info planets";
   align-items: center;
   justify-items: center;
 }
-
 .grid .active {
   cursor: pointer;
   animation: neon2 1.5s ease-in-out infinite alternate;
   color: #ffffff;
 }
-
 .grid .index {
   position: absolute;
   z-index: 2;
@@ -34,20 +32,17 @@ canvas {
   cursor: pointer;
   color: white;
 }
-
 .grid .info {
   position: absolute;
   z-index: 2;
   grid-area: info;
   color: white;
 }
-
 .grid .info:hover {
   cursor: pointer;
   animation: neon2 1.5s ease-in-out infinite alternate;
   color: #ffffff;
 }
-
 .grid .planet {
   position: absolute;
   z-index: 2;
@@ -55,32 +50,27 @@ canvas {
   grid-area: planet;
   color: white;
 }
-
 .grid .planet li {
   text-align: center;
   list-style-type: none;
   padding-top: 0.2em;
 }
-
 .grid .planet li:hover {
   cursor: pointer;
   animation: neon2 1.5s ease-in-out infinite alternate;
   color: #ffffff;
 }
-
 .grid .planets {
   position: absolute;
   z-index: 2;
   grid-area: planets;
   color: white;
 }
-
 .grid .planets:hover {
   cursor: pointer;
   animation: neon2 1.5s ease-in-out infinite alternate;
   color: #ffffff;
 }
-
 .grid a {
   text-decoration: none;
   color: white;
@@ -92,38 +82,30 @@ canvas {
   right: 1%;
   border-radius: 50%;
 }
-
 .feedback button {
   border-radius: 50%;
 }
-
 .feedback button:hover {
   opacity: 0.8;
 }
-
 .feedback button:active {
   transform: scale(0.9);
 }
-
 .feedback button #paper {
   background-color: white;
 }
-
 .feedback img {
   width: 3em;
   transform: scale(0.6);
 }
-
 .feedback span {
   font-size: 3em;
   margin-top: 0.1em;
   margin-bottom: 0.5em;
 }
-
 .feedback .checked {
   color: orange;
 }
-
 .feedback input[type=text] {
   width: 100%;
   padding: 12px 20px;
@@ -133,12 +115,10 @@ canvas {
   box-sizing: border-box;
   font-weight: bold;
 }
-
 .feedback .submit {
   display: flex;
   justify-content: center;
 }
-
 .feedback .submit button {
   color: white;
   background-color: green;
@@ -150,34 +130,27 @@ canvas {
   cursor: pointer;
   width: 25%;
 }
-
 .feedback .submit button:hover {
   opacity: 0.8;
 }
-
 .feedback .cross {
   margin: 24px 0 12px 0;
   position: relative;
 }
-
 .feedback .cross span {
   cursor: pointer;
 }
-
 .feedback img.paper {
   width: 40%;
   border-radius: 50%;
 }
-
 .feedback .container {
   padding: 16px 1em;
 }
-
 .feedback span.Feedback {
   float: right;
   padding-top: 16px;
 }
-
 .feedback .modal {
   display: none;
   position: fixed;
@@ -187,11 +160,10 @@ canvas {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   padding-top: 60px;
 }
-
 .feedback .modal-content {
   background-color: white;
   margin: 5% auto 15% auto;
@@ -199,7 +171,6 @@ canvas {
   width: 80%;
   border-radius: 1em;
 }
-
 .feedback .modal .close {
   position: absolute;
   right: 25px;
@@ -208,16 +179,13 @@ canvas {
   font-size: 35px;
   font-weight: bold;
 }
-
 .feedback .modal .close:hover, .feedback .modal .close:close {
   color: red;
   cursor: pointer;
 }
-
 .feedback .modal .animate {
   animation: animatezoom 0.6s;
 }
-
 @keyframes animatezoom {
   from {
     transform: scale(0);
@@ -226,7 +194,6 @@ canvas {
     transform: scale(1);
   }
 }
-
 @media screen and (max-width: 300px) {
   .feedback .modal span.Feedback {
     display: block;
@@ -236,13 +203,11 @@ canvas {
     width: 100%;
   }
 }
-
 @keyframes neon2 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff, 0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff, 0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
